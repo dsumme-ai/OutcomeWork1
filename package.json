@@ -1,4 +1,4 @@
-npm install --save-dev eslint
+
 {
   "name": "my-app",
   "version": "1.0.0",
@@ -12,7 +12,7 @@ npm install --save-dev eslint
     "@emotion/styled": "latest"
   }
 "devDependencies": {
-    "eslint": "^<version>" // Replace with the actual version number installed
+    "eslint": "^v9.12.0" // Replace with the actual version number installed
   },
   "scripts": {
     "vercel-build": "next build"
