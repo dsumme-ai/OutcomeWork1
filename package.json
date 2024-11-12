@@ -1,3 +1,4 @@
+npm install --save-dev eslint
 {
   "name": "my-app",
   "version": "1.0.0",
