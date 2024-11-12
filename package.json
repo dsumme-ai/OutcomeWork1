@@ -10,7 +10,7 @@
     "next-auth": "latest",
     "@emotion/react": "latest",
     "@emotion/styled": "latest"
-  }
+  },
 "devDependencies": {
     "eslint": "^v9.12.0" // Replace with the actual version number installed
   },
