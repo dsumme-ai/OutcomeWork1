@@ -11,4 +11,10 @@ npm install --save-dev eslint
     "@emotion/react": "latest",
     "@emotion/styled": "latest"
   }
+"devDependencies": {
+    "eslint": "^<version>" // Replace with the actual version number installed
+  },
+  "scripts": {
+    "vercel-build": "next build"
+  }
 }
