@@ -12,7 +12,7 @@
     "@emotion/styled": "latest"
   },
 "devDependencies": {
-    "eslint": "^9.12.0" // Replace with the actual version number installed
+    "eslint": "^9.12.0" # // Replace with the actual version number installed
   },
   "scripts": {
     "vercel-build": "next build"
