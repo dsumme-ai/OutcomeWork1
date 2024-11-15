@@ -2,7 +2,15 @@ import React from 'react';
 import { useSession } from 'next-auth/react';
 
 const Dashboard = () => {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
+
+  if (status === 'loading') {
+    return <div>Loading...</div>;
+  }
+
+  if (!session) {
+    return <div>Please log in to view your dashboard.</div>;
+  }
 
   return (
     <div>
