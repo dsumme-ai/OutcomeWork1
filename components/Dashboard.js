@@ -15,7 +15,7 @@ const Dashboard = () => {
   return (
     <div>
       <h1>Dashboard</h1>
-      <h2>Welcome, {session.user.name}</h2>
+      <h2>Welcome, {session.user?.name}</h2>
     </div>
   );
 };
