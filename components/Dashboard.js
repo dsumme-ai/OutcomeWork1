@@ -1,21 +1,28 @@
 import React from 'react';
-import { useSession } from 'next-auth/react';
+import { getSession } from 'next-auth/react';
 
-const Dashboard = () => {
-  const { data: session, status } = useSession();
-
-  if (status === 'loading') {
-    return <div>Loading...</div>;
-  }
+export async function getServerSideProps(context) {
+  const session = await getSession(context);
 
   if (!session) {
-    return <div>Please log in to view your dashboard.</div>;
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: false,
+      },
+    };
   }
 
+  return {
+    props: { session },
+  };
+}
+
+const Dashboard = ({ session }) => {
   return (
     <div>
       <h1>Dashboard</h1>
-      <h2>Welcome, {session.user?.name}</h2>
+      <h2>Welcome, {session.user.name}</h2>
     </div>
   );
 };
